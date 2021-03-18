@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ALLIFY // Get it done</title>
+    <link rel="shortcut icon" href="img/friends (1).png" type="image/x-icon" />
+    <link rel="stylesheet" href="sass/app.css" />
+    <script type="module" defer src="js/app.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="welcome">
+        <h1 class="welcome__title">Good morning Antonin</h1>
+      </div>
+
+      <div class="clock">
+        <h1 class="clock__time">17:30</h1>
+      </div>
+
+      <div class="weather">
+        <!-- <img src="" alt="" /> -->
+        <h1>17C</h1>
+      </div>
+    </header>
+    <div class="content">
+      <div class="todo">
+        <form class="todo__form" action="">
+          <input class="todo__input" type="text" placeholder="Add task" />
+          <button class="todo__btn" type="">
+            <img src="img/plus.png" alt="add" />
+          </button>
+        </form>
+        <div class="todo__lists">
+          <div class="todo__list">
+            <p class="todo__list--item">Do math homework</p>
+            <div class="todo__imgs">
+              <img class="todo__icon" src="img/checked.png" alt="" />
+              <img class="todo__icon" src="img/delete.png" alt="delete" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pomo">
+        <h1 class="pomo__title">Pomodoro Timer</h1>
+        <div class="pomo__time">
+          <h1>25:00</h1>
+        </div>
+
+        <div class="pomo__setup">
+          <div class="pomo__work">
+            <h4>Work Duration</h4>
+            <div class="pomo__work--setup">
+              <button class="btn pomo__btn">+</button>
+              <p>25 mins</p>
+              <button class="btn pomo__btn">-</button>
+            </div>
+          </div>
+          <div class="pomo__break">
+            <h4>Break Duration</h4>
+            <div class="pomo__break--setup">
+              <button class="btn pomo__btn">+</button>
+              <p>5 mins</p>
+              <button class="btn pomo__btn">-</button>
+            </div>
+          </div>
+
+          <div class="play__pause">
+            <button class="play__pause--btn">
+              <img src="img/play-button.png" alt="" />
+            </button>
+            <button class="btn pomo__btn">RESET</button>
+            <button class="play__pause--btn">
+              <img src="img/pause.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
