@@ -32,11 +32,12 @@ body {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   border: 2px solid $color-primary;
-  padding: 1.5rem 2rem;
+  padding: 1.2rem 1.2rem;
   background: transparent;
   color: $color-primary;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .btn span {
@@ -161,9 +162,10 @@ body {
     z-index: 0;
   }
   &__btn {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-left: 15rem;
     margin-top: 5rem;
+    display: inline-block;
   }
 
   &__features {
@@ -232,108 +234,4 @@ body {
   transition: inherit;
   transform: translateY(100%);
   width: 100%;
-}
-
-/// modal window
-
-.modal {
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 50%;
-  background-color: $color-third;
-  padding: 6rem;
-  border-radius: 5px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 10;
-  text-align: center;
-
-  &__btn {
-    background-color: transparent;
-    color: $color-primary;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 5rem;
-    position: absolute;
-    right: 3rem;
-    top: 3rem;
-    &:hover {
-      cursor: pointer;
-    }
-    &:focus {
-      outline: none;
-    }
-  }
-
-  &__title {
-    font-size: 4rem;
-    color: $color-white;
-    font-weight: 900;
-    margin-bottom: 4rem;
-    margin-top: 4rem;
-  }
-
-  &__form {
-    margin-top: 4rem;
-    font-size: 4rem;
-    color: $color-white;
-    display: inline-grid;
-    justify-items: center;
-  }
-  &__label {
-    font-family: "Nunito", sans-serif;
-    font-weight: 600;
-    margin: 3rem;
-  }
-
-  &__input {
-    height: 4rem;
-    width: 120%;
-    border: none;
-    border-radius: 2rem;
-    margin-bottom: 7rem;
-    text-align: center;
-    font-size: 2rem;
-
-    &:focus-within {
-      outline: none;
-      transform: translateY(-2px);
-      box-shadow: 0 0.7rem 3rem rgba($color-black, 0.1);
-    }
-  }
-
-  &__submit {
-    width: 15rem;
-    font-size: 2rem;
-    &:hover {
-      cursor: pointer;
-    }
-    &:focus {
-      outline: none;
-    }
-  }
-}
-
-.overlay {
-  position: absolute;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
-  z-index: 5;
-}
-
-.show {
-  opacity: 1;
-  pointer-events: auto;
 }

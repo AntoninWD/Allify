@@ -26,6 +26,59 @@ body {
   background-size: cover;
 }
 
+.btn {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  border: 2px solid #ffda36;
+  padding: 0.5rem 0.8rem;
+  background: transparent;
+  color: #ffda36;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn span {
+  z-index: 1;
+  position: relative;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 140px;
+  border-radius: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+          transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  -webkit-transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #ffda36;
+  opacity: 0;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: #080808;
+  z-index: 2;
+}
+
+.btn:hover::before {
+  opacity: 1;
+  -webkit-transition-duration: 0.85s;
+          transition-duration: 0.85s;
+  -webkit-transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+          transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+  z-index: -1;
+}
+
+.btn:focus {
+  outline: none;
+}
+
 .header {
   display: -ms-grid;
   display: grid;
@@ -235,7 +288,7 @@ body {
 .pomo__btn {
   background: #55bcc9;
   border: none;
-  border-radius: 8px;
+  border-radius: 25px;
   padding: 0.3rem 0.8rem;
   margin-left: 0.5rem;
   margin-top: 0.25rem;
@@ -318,5 +371,119 @@ body {
 
 .play__pause--btn:hover {
   cursor: pointer;
+}
+
+.modal {
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  background-color: #55bcc9;
+  padding: 6rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  text-align: center;
+}
+
+.modal__btn {
+  background-color: transparent;
+  color: #ffda36;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 5rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.modal__btn:hover {
+  cursor: pointer;
+}
+
+.modal__btn:focus {
+  outline: none;
+}
+
+.modal__title {
+  font-size: 2rem;
+  color: white;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.modal__form {
+  margin-top: 4rem;
+  color: white;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  justify-items: center;
+}
+
+.modal__label {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  margin: 3rem;
+}
+
+.modal__input {
+  height: 2.5rem;
+  width: 90%;
+  border: none;
+  border-radius: 2rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.modal__input:focus-within {
+  outline: none;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0 0.7rem 3rem rgba(8, 8, 8, 0.1);
+          box-shadow: 0 0.7rem 3rem rgba(8, 8, 8, 0.1);
+}
+
+.modal__submit {
+  width: 15rem;
+  font-size: 1.5rem;
+}
+
+.modal__submit:hover {
+  cursor: pointer;
+}
+
+.modal__submit:focus {
+  outline: none;
+}
+
+.overlay {
+  position: absolute;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 5;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 /*# sourceMappingURL=app.css.map */

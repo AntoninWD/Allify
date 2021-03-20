@@ -27,11 +27,12 @@ body {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   border: 2px solid #ffda36;
-  padding: 1.5rem 2rem;
+  padding: 1.2rem 1.2rem;
   background: transparent;
   color: #ffda36;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .btn span {
@@ -171,9 +172,10 @@ body {
 }
 
 .intro__btn {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-left: 15rem;
   margin-top: 5rem;
+  display: inline-block;
 }
 
 .intro__features {
@@ -264,120 +266,5 @@ body {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   width: 100%;
-}
-
-.modal {
-  pointer-events: none;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 50%;
-  height: 50%;
-  background-color: #55bcc9;
-  padding: 6rem;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-          box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 10;
-  text-align: center;
-}
-
-.modal__btn {
-  background-color: transparent;
-  color: #ffda36;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 5rem;
-  position: absolute;
-  right: 3rem;
-  top: 3rem;
-}
-
-.modal__btn:hover {
-  cursor: pointer;
-}
-
-.modal__btn:focus {
-  outline: none;
-}
-
-.modal__title {
-  font-size: 4rem;
-  color: white;
-  font-weight: 900;
-  margin-bottom: 4rem;
-  margin-top: 4rem;
-}
-
-.modal__form {
-  margin-top: 4rem;
-  font-size: 4rem;
-  color: white;
-  display: -ms-inline-grid;
-  display: inline-grid;
-  justify-items: center;
-}
-
-.modal__label {
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  margin: 3rem;
-}
-
-.modal__input {
-  height: 4rem;
-  width: 120%;
-  border: none;
-  border-radius: 2rem;
-  margin-bottom: 7rem;
-  text-align: center;
-  font-size: 2rem;
-}
-
-.modal__input:focus-within {
-  outline: none;
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-  -webkit-box-shadow: 0 0.7rem 3rem rgba(8, 8, 8, 0.1);
-          box-shadow: 0 0.7rem 3rem rgba(8, 8, 8, 0.1);
-}
-
-.modal__submit {
-  width: 15rem;
-  font-size: 2rem;
-}
-
-.modal__submit:hover {
-  cursor: pointer;
-}
-
-.modal__submit:focus {
-  outline: none;
-}
-
-.overlay {
-  position: absolute;
-  pointer-events: none;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  z-index: 5;
-}
-
-.show {
-  opacity: 1;
-  pointer-events: auto;
 }
 /*# sourceMappingURL=interface.css.map */
