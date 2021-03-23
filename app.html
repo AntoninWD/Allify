@@ -8,40 +8,32 @@
     <title>ALLIFY // Get it done</title>
     <link rel="shortcut icon" href="img/friends (1).png" type="image/x-icon" />
     <link rel="stylesheet" href="sass/app.css" />
-    <script defer src="js/app.js"></script>
+    <script type="module" defer src="js/app.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="welcome">
-        <h1 class="welcome__title">Good morning Antonin</h1>
+        <h1 class="welcome__title">Welcome</h1>
       </div>
 
       <div class="clock">
-        <h1 class="clock__time">17:30</h1>
+        <h1 class="clock__time"></h1>
       </div>
 
       <div class="weather">
-        <!-- <img src="" alt="" /> -->
-        <h1>17C</h1>
+        <div class="weather__icon"></div>
+        <h1 class="weather__temp"></h1>
       </div>
     </header>
     <div class="content">
       <div class="todo">
-        <form class="todo__form" action="">
+        <form class="todo__form">
           <input class="todo__input" type="text" placeholder="Add task" />
           <button class="todo__btn" type="">
             <img src="img/plus.png" alt="add" />
           </button>
         </form>
-        <div class="todo__lists">
-          <div class="todo__list">
-            <p class="todo__list--item">Do math homework</p>
-            <div class="todo__imgs">
-              <img class="todo__icon" src="img/checked.png" alt="" />
-              <img class="todo__icon" src="img/delete.png" alt="delete" />
-            </div>
-          </div>
-        </div>
+        <div class="todo__lists"></div>
       </div>
 
       <div class="pomo">
@@ -70,27 +62,27 @@
 
           <div class="play__pause">
             <button class="play__pause--btn">
-              <img src="img/play-button.png" alt="" />
+              <img class="play__pause--img" src="img/play-button.png" alt="" />
             </button>
             <button class="pomo__btn">RESET</button>
             <button class="play__pause--btn">
-              <img src="img/pause.png" alt="" />
+              <img class="play__pause--img" src="img/pause.png" alt="" />
             </button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="modal">
+    <div class="modal hide">
       <h1 class="modal__title">Please enter your first name</h1>
       <form class="form">
         <div class="modal__form">
-          <input class="modal__input" type="text" required name="firstname" />
+          <input class="modal__input" type="text" required name="first-name" />
 
           <button class="btn modal__submit">SUBMIT</button>
         </div>
       </form>
     </div>
-    <div class="overlay"></div>
+    <div class="overlay hide"></div>
   </body>
 </html>

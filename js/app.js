@@ -1,5 +1,7 @@
-"strict";
-
+//import
+import { clock } from "./time.js";
+import { todo } from "./todo.js";
+import { weather } from "./weather.js";
 // modal window
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
@@ -12,8 +14,12 @@ submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
 
   firstName = inputName.value;
+  if (!firstName) {
+    inputName.classList.add("red-border");
 
-  if (!firstName) return;
+    return;
+  }
+
   modal.classList.add("hide");
   overlay.classList.add("hide");
 
@@ -36,6 +42,7 @@ const getDayTime = function () {
 };
 
 const getWelcomeMessage = function (firstName) {
+  if (!firstName || Number.isFinite(firstName)) return;
   let nameCap = firstName.toLowerCase().replace("-", " ").split(/\s+/);
   getDayTime();
 
@@ -47,3 +54,8 @@ const getWelcomeMessage = function (firstName) {
 
   welcomeName.textContent = `${message} ${finalName}`;
 };
+
+// initialize other js function
+clock();
+weather();
+todo();
