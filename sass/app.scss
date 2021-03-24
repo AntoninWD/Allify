@@ -182,17 +182,26 @@ body {
     }
   }
   &__btn {
-    background: transparent;
+    background: $color-primary;
     border: none;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    margin-top: 0.25rem;
+    font-size: 1.5rem;
+    color: $color-white;
     margin-left: 0.7rem;
     margin-top: 0.25rem;
-
     &:hover {
       cursor: pointer;
     }
     &:focus {
       outline: none;
     }
+
+    // &--img {
+    //   height: 2.2rem;
+    // }
   }
 
   &__list {
@@ -225,8 +234,27 @@ body {
   }
 }
 
+.option--btn {
+  background: transparent;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
 .done {
   text-decoration: line-through;
+  color: $color-grey;
+}
+.opacity {
+  background: rgba($color-white, 0.2);
+}
+.fall {
+  transform: translateX(1rem);
+  opacity: 0;
 }
 
 .pomo {

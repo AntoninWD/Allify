@@ -2,6 +2,7 @@
 import { clock } from "./time.js";
 import { todo } from "./todo.js";
 import { weather } from "./weather.js";
+import { pomo } from "./pomodoro.js";
 // modal window
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
@@ -55,7 +56,8 @@ const getWelcomeMessage = function (firstName) {
   welcomeName.textContent = `${message} ${finalName}`;
 };
 
-// initialize other js function
+// initialize other js modules
 clock();
 weather();
 todo();
+pomo();

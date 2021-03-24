@@ -227,8 +227,14 @@ body {
 }
 
 .todo__btn {
-  background: transparent;
+  background: #ffda36;
   border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  margin-top: 0.25rem;
+  font-size: 1.5rem;
+  color: white;
   margin-left: 0.7rem;
   margin-top: 0.25rem;
 }
@@ -280,8 +286,32 @@ body {
   cursor: pointer;
 }
 
+.option--btn {
+  background: transparent;
+  border: none;
+}
+
+.option--btn:hover {
+  cursor: pointer;
+}
+
+.option--btn:focus {
+  outline: none;
+}
+
 .done {
   text-decoration: line-through;
+  color: #adadad;
+}
+
+.opacity {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.fall {
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
+  opacity: 0;
 }
 
 .pomo {

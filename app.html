@@ -28,9 +28,10 @@
     <div class="content">
       <div class="todo">
         <form class="todo__form">
-          <input class="todo__input" type="text" placeholder="Add task" />
+          <input class="todo__input" type="text" placeholder="Add Task" />
           <button class="todo__btn" type="">
-            <img src="img/plus.png" alt="add" />
+            <span>&plus;</span>
+            <!-- <img class="todo__btn--img" src="img/plus.png" alt="add" /> -->
           </button>
         </form>
         <div class="todo__lists"></div>
@@ -39,33 +40,33 @@
       <div class="pomo">
         <h1 class="pomo__title">Pomodoro Timer</h1>
         <div class="pomo__time">
-          <h1>25:00</h1>
+          <h1 class="time">25:00</h1>
         </div>
 
         <div class="pomo__setup">
           <div class="pomo__work">
             <h4>Work Duration</h4>
             <div class="pomo__work--setup">
-              <button class="pomo__btn">&plus;</button>
+              <button class="pomo__btn work__plus">&plus;</button>
               <p>25 mins</p>
-              <button class="pomo__btn">&minus;</button>
+              <button class="pomo__btn work__minus">&minus;</button>
             </div>
           </div>
           <div class="pomo__break">
             <h4>Break Duration</h4>
             <div class="pomo__break--setup">
-              <button class="pomo__btn">&plus;</button>
+              <button class="pomo__btn break__plus">&plus;</button>
               <p>5 mins</p>
-              <button class="pomo__btn">&minus;</button>
+              <button class="pomo__btn break__minus">&minus;</button>
             </div>
           </div>
 
           <div class="play__pause">
-            <button class="play__pause--btn">
+            <button class="play__pause--btn play">
               <img class="play__pause--img" src="img/play-button.png" alt="" />
             </button>
-            <button class="pomo__btn">RESET</button>
-            <button class="play__pause--btn">
+            <button class="pomo__btn reset">RESET</button>
+            <button class="play__pause--btn pause">
               <img class="play__pause--img" src="img/pause.png" alt="" />
             </button>
           </div>
