@@ -16,19 +16,22 @@ export const pomo = function () {
   let wTime = 25;
   let bTime = 5;
   let firstStart = false;
+  let secondStart = false;
   let paused = false;
-  let set;
+  let set, time;
   let resetPressed = false;
   let configBlocked = false;
   ////
   const startTimer = function () {
+    if (configBlocked) return;
     configBlocked = true;
     paused = false;
-    // wTime = wTime * 60;
-
+    title.textContent = "Time to work!";
+    title.style.color = "#ffda36";
+    timeContainer.style.color = "#55bcc9";
     if (!firstStart || resetPressed) {
       set = setInterval(function () {
-        !paused ? workTimer() : "";
+        !paused ? getWorkTime() : "";
       }, 1000);
     }
   };
@@ -37,44 +40,87 @@ export const pomo = function () {
     paused = true;
   };
 
-  const getTime = function () {
+  const firstTime = function () {
     if (!firstStart) {
-      wTime = wTime * 60;
+      time = wTime;
+      time = time * 60;
+      // time = 5; for testing
       firstStart = true;
     }
-    const min = String(Math.trunc(wTime / 60)).padStart(2, 0);
-    const sec = String(wTime % 60).padStart(2, 0);
-    timeContainer.textContent = `${min}:${sec}`;
+    timeData(time);
   };
-  const workTimer = function () {
-    getTime();
-    wTime--;
+
+  const getWorkTime = function () {
+    firstTime();
+    if (time === 0) {
+      getBreakTime();
+      title.textContent = "Take a break!";
+      title.style.color = "red";
+      timeContainer.style.color = "red";
+
+      if (time === 0) {
+        clearInterval(set);
+        restartTime();
+        return;
+      }
+    }
+
+    time--;
+  };
+
+  const restartTime = function () {
+    // wTime = 25;
+    // bTime = 5;
+    firstStart = false;
+    secondStart = false;
+    configBlocked = false;
+    startTimer();
+  };
+
+  const getBreakTime = function () {
+    if (!secondStart) {
+      time = bTime;
+      time = time * 60;
+      // time = 5; for testing
+      secondStart = true;
+    }
+
+    timeData(time);
+  };
+
+  const timeData = function (time) {
+    const min = String(Math.trunc(time / 60)).padStart(2, 0);
+    const sec = String(time % 60).padStart(2, 0);
+    timeContainer.textContent = `${min}:${sec}`;
   };
 
   // event listener
   workPlus.addEventListener("click", function () {
     if (configBlocked) return;
     wTime++;
+
     workTime.textContent = `${wTime} mins`;
   });
 
   workMinus.addEventListener("click", function () {
-    if (configBlocked) return;
-    if (wTime === 0) return;
+    if (configBlocked || wTime === 0) return;
+
     wTime--;
+
     workTime.textContent = `${wTime} mins`;
   });
 
   breakPlus.addEventListener("click", function () {
     if (configBlocked) return;
     bTime++;
+
     breakTime.textContent = `${bTime} mins`;
   });
 
   breakMinus.addEventListener("click", function () {
-    if (configBlocked) return;
-    if (bTime === 0) return;
+    if (configBlocked || bTime === 0) return;
     bTime--;
+
     breakTime.textContent = `${bTime} mins`;
   });
 
@@ -88,6 +134,8 @@ export const pomo = function () {
     firstStart = false;
     timeContainer.textContent = `25:00`;
     configBlocked = false;
+    title.textContent = "Pomodoro Timer";
+    title.style.color = "white";
   });
   playBtn.addEventListener("click", startTimer);
   pauseBtn.addEventListener("click", pauseTimer);

@@ -31,7 +31,6 @@
           <input class="todo__input" type="text" placeholder="Add Task" />
           <button class="todo__btn" type="">
             <span>&plus;</span>
-            <!-- <img class="todo__btn--img" src="img/plus.png" alt="add" /> -->
           </button>
         </form>
         <div class="todo__lists"></div>
@@ -62,19 +61,19 @@
           </div>
 
           <div class="play__pause">
-            <button class="play__pause--btn play">
-              <img class="play__pause--img" src="img/play-button.png" alt="" />
+            <button class="play__pause--btn play pomo__btn">
+              <p>START</p>
             </button>
-            <button class="pomo__btn reset">RESET</button>
-            <button class="play__pause--btn pause">
-              <img class="play__pause--img" src="img/pause.png" alt="" />
+            <button class="pomo__btn reset play__pause--btn">RESET</button>
+            <button class="play__pause--btn pause pomo__btn">
+              <p>PAUSE</p>
             </button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="modal hide">
+    <div class="modal">
       <h1 class="modal__title">Please enter your first name</h1>
       <form class="form">
         <div class="modal__form">
@@ -84,6 +83,6 @@
         </div>
       </form>
     </div>
-    <div class="overlay hide"></div>
+    <div class="overlay"></div>
   </body>
 </html>

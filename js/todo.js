@@ -9,9 +9,9 @@ export const todo = function () {
     if (!input) return;
     const markup = `
     <div class="todo__list">
-      <ul class="todo__list--item">
+      <li class="todo__list--item">
         ${input}
-      </ul>
+      </li>
       <div class="todo__imgs">
         <button class="check option--btn">
           <img class="todo__icon " src="img/checked.png" alt="" />
