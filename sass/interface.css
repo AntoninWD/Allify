@@ -267,7 +267,7 @@ body {
   margin-top: 30rem;
   z-index: 2;
   position: relative;
-  padding-bottom: 35rem;
+  padding-bottom: 30rem;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -357,27 +357,70 @@ body {
   width: 100%;
 }
 
-#wave {
-  position: relative;
-  height: 80px;
-  width: 100%;
-  background: #ffffff;
-  z-index: 1;
-}
-
-#wave:after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 50% 100%;
-  width: 150%;
-  height: 200px;
-  background-color: #ffffff;
-  left: -50px;
-  top: -50px;
-}
-
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10rem 3rem 0 3rem;
+  z-index: 5;
+  color: #55bcc9;
+  background-color: #ffe881;
+}
+
+@media only screen and (max-width: 1100px) {
+  .footer {
+    display: block;
+    text-align: center;
+  }
+}
+
+.footer__follow {
+  margin-left: 5rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .footer__follow {
+    margin: 0;
+  }
+}
+
+.footer__follow--title {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .footer__follow--title {
+    margin-left: 0;
+    margin-top: 5rem;
+  }
+}
+
+.footer__follow--logo__img {
+  margin: 1rem;
+}
+
+.footer__copy {
+  font-size: 1.4rem;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  margin-left: 18rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .footer__copy {
+    margin: 10rem 0 5rem 0;
+  }
+}
+
+.footer__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,7 +430,24 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10rem 3rem 0 3rem;
-  z-index: 5;
+  padding-right: 6rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .footer__logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 0;
+  }
+}
+
+.footer__logo--img {
+  width: 10rem;
+  margin: 0 4rem;
+}
+
+.footer__logo--title {
+  font-size: 4rem;
 }
 /*# sourceMappingURL=interface.css.map */
