@@ -114,7 +114,7 @@ body {
 
 .content {
   display: grid;
-  grid-template-rows: 80vh;
+  grid-template-rows: 48rem;
   grid-template-columns: 50% 50%;
   grid-template-areas: "todo pomo";
   align-items: center;
@@ -411,7 +411,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-  height: 50%;
+  height: fit-content;
   background-color: $color-third;
   padding: 6rem;
   border-radius: 5px;
@@ -422,7 +422,7 @@ body {
 
   @media only screen and (max-width: $mobile-media) {
     padding: 4rem 2rem;
-    height: fit-content;
+    height: 40rem;
     width: 70%;
   }
   &__btn {

@@ -122,8 +122,8 @@ body {
 .content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 80vh;
-      grid-template-rows: 80vh;
+  -ms-grid-rows: 48rem;
+      grid-template-rows: 48rem;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
       grid-template-areas: "todo pomo";
@@ -528,7 +528,9 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 50%;
-  height: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #55bcc9;
   padding: 6rem;
   border-radius: 5px;
@@ -543,9 +545,7 @@ body {
 @media only screen and (max-width: 600px) {
   .modal {
     padding: 4rem 2rem;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 40rem;
     width: 70%;
   }
 }
