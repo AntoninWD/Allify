@@ -22,6 +22,8 @@ export const pomo = function () {
   let resetPressed = false;
   let configBlocked = false;
   ////
+  const audio = new Audio("sound/sound.mp3");
+
   const startTimer = function () {
     if (configBlocked) return;
     configBlocked = true;
@@ -57,8 +59,9 @@ export const pomo = function () {
       title.textContent = "Take a break!";
       title.style.color = "red";
       timeContainer.style.color = "red";
-
+      audio.play();
       if (time === 0) {
+        audio.play();
         clearInterval(set);
         restartTime();
         return;
